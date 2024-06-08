@@ -1,3 +1,175 @@
-#heading{
-    color: red
+.header {
+    display: flex;
+    border: 1px solid black;
+    background-color: #cdd15e;
+    justify-content: space-between;
+    box-shadow: 4px 4px 15px rgb(8, 11, 10);
 }
+.logo-container{
+ display: flex;
+ align-items: center;
+}
+.logo-text{
+  padding-left: 20px;
+}
+.logo {
+    width: 100px;
+    padding-left: 50px;
+    padding-top: 5px;
+    
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 23px;
+    font-style: bold;
+}
+
+.nav-items > ul > li {
+    padding: 18px;
+    margin: 10px;
+    
+}
+.nav-items{
+    padding: 0px 70px;
+    cursor: pointer;
+    
+
+}
+.body{
+    background: linear-gradient(to bottom right, #ffffff, #ceedf5); 
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 20px;
+}
+.res-container{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.res-card {
+    width: 220px;
+    height: 390px;
+    background-color: #edf5f4;
+    margin: 15px;
+    padding: 5px;
+    /* border-radius: 50px; Rounded corners */
+    box-shadow: 2px 2px 15px rgba(0.5, 0.5, 0, 1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid rgb(14, 16, 17);
+    transform: scale(1.1); 
+}
+ .search{
+    padding: 15px 10px;
+ }
+ .res-logo{
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    object-fit:cover;   
+ }
+.star-logo{
+    height: 20px;
+    width: 20px;
+    padding-right: 3px;
+}
+ .content{
+    line-height: 16px;
+ }
+.search-input{
+    height: 30px;
+    width: 900px;
+}
+.search-btn{
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+}
+.filter-btn{
+    margin: 25px;
+    cursor: pointer;
+    background-color: hsl(0, 69%, 49%);
+    mask-border-width: 30px;
+    height: 30px;
+    width: 500px;
+    -webkit-text-fill-color: whitesmoke;
+    font-style: italic;
+    font-weight: 400;
+    font-size:x-large;
+   
+
+}
+.filter{
+  
+    justify-content:right;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text inside the container */
+    flex-wrap: wrap; /* Allow content to wrap if necessary */
+    width: 100%;
+   
+   
+}
+
+.search-container{
+    justify-content: center;
+    padding: 20px;
+}
+.body-head{
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Items will be spaced evenly along the main axis */
+    align-items: center; /* Items will be vertically centered */
+   
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+.shimmer-card{
+    width: 250px;
+    height: 350px;
+    background-color: rgb(226, 229, 235);
+    margin: 5px;
+    padding: 8px;
+}
+.profile-button {
+    width: 75px; /* Adjust as needed */
+    height: 65px; /* Adjust as needed */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color:azure;
+    ;
+  }
+  .login-button{
+    width: 75px;
+    cursor: pointer;
+    font-display:inherit;
+    background-color:rgb(10, 11, 11);
+    -webkit-text-fill-color: whitesmoke;
+
+   
+  }
+  /* Optional: Hover effect */
+  .profile-button:hover {
+    opacity: 0.8;
+  }
+
+  /* Optional: Add a profile image */
+  .profile-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire space */
+  }

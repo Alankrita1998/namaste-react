@@ -1,0 +1,34 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react by Alankrita",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "module",
+    "git": "your-git-repository",
+    "url": "(https://github.com/Alankrita1998/namaste-react.git)"
+  },
+  "keywords": [],
+  "author": "'Alankrita Mohapatra'",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "caniuse-lite": "^1.0.30001610",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
