@@ -4,6 +4,7 @@ import { SEARCH_LOGO } from "../utils/constants";
 import { useState,useEffect } from "react"; 
 // Above import within branckets is called named import
 import Shimmer from "./Shimmer";
+import {Link} from "react-router-dom";
 
 const Body = () => {
     const [listOfRestaurants,setListOfRestaurants] = useState([]);
@@ -26,12 +27,18 @@ const Body = () => {
        
     };
    
-
+    handleSearch = () => {const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())); setFilterRestaurant(filteredRestaurant )};
+    handleKeyPress = (e) => {
+        if (e.key === "Enter"){
+            handleSearch()
+        }
+     }
 
     // // Conditional Rendering--> you render a component based on a condition
     // if(listOfRestaurants.length === 0){
     //     return <Shimmer/>
     // }
+
 
 //    we can also write the conditional rendering in the below manner in return itself with colon
     return listOfRestaurants.length === 0 ?(
@@ -45,8 +52,8 @@ const Body = () => {
                     const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4)
                     setFilterRestaurant(filteredList) ;}}>-- Top Rated Restaurants! --</button>
                     <div className="search-container">
-                <input className="search-input" type="text" placeholder="Search Restaurants" value = {searchText} onChange = {(e) => { setSearchText(e.target.value);}} />
-                <button className="search-btn" alt = "Search" onClick={() => { const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())); setFilterRestaurant(filteredRestaurant )}}> Search</button>
+                <input className="search-input" type="text" placeholder="Search Restaurants" value = {searchText} onChange = {(e) => { setSearchText(e.target.value);}} onKeyPress = {handleSearch}/>
+                <button className="search-btn" alt = "Search" onClick= { handleKeyPress}> Search</button>
                 </div>
                 
             </div>
@@ -54,7 +61,10 @@ const Body = () => {
         </div>
             <div className= "res-container">
                 {filterRestaurant.map((restaurant) => (
-                    <RestaurantCard key={restaurant.info.id} resData = {restaurant}/>
+                    <Link key={restaurant.info.id}
+                    to ={"/restaurants/" + restaurant.info.id}
+                    >
+                    <RestaurantCard  resData = {restaurant}/></Link>
                 ))}
             </div>
         </div>

@@ -18,6 +18,14 @@
     padding-top: 5px;
     
 }
+.list{
+    display: flex;
+    justify-content: space-around;
+}
+.menu{
+    margin: 20px;
+    padding: 10px
+}
 
 .nav-items > ul {
     display: flex;
@@ -51,15 +59,35 @@
 }
 .res-card {
     width: 220px;
-    height: 390px;
+    line-height: 10px;
+    height: 405px;
     background-color: #edf5f4;
     margin: 15px;
     padding: 5px;
     /* border-radius: 50px; Rounded corners */
     box-shadow: 2px 2px 15px rgba(0.5, 0.5, 0, 1);
     transition: transform 0.1s ease-in-out;
+    color:black;
 }
-
+a {
+    text-decoration: none;
+  }
+.res-name{
+    font-weight:900;
+    font-size:x-large;
+    line-height:120%;
+}
+.res-areaname{
+    font-size: x-small;
+    font:italic;
+    color: #c3c3bb;
+    display: flex;
+    justify-content: space-between;
+}
+.res-cuisines{
+    color: #868680;
+    line-height: 100%;
+}
 .res-card:hover {
     cursor: pointer;
     border: 1px solid rgb(14, 16, 17);
@@ -79,10 +107,12 @@
     height: 20px;
     width: 20px;
     padding-right: 3px;
+    
 }
- .content{
-    line-height: 16px;
- }
+.content{
+    line-height: 5px;
+}
+
 .search-input{
     height: 30px;
     width: 900px;
