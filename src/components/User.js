@@ -13,7 +13,6 @@ async function fetchUsers () {
     const data = await fetch ("https://api.github.com/users/alankrita1998");
     const json = await data.json();
     setUsers(json);
-    // console.log(json);
 }
 
 if (users === null) return <Shimmer/>;
