@@ -1,9 +1,9 @@
 import Shimmer from "./Shimmer.js";
 import { useParams } from "react-router-dom";
-import {  STAR} from "../utils/constants";
+import {  LINKEDIN, STAR} from "../utils/constants";
 import bicycle from "../utils/bicycle.svg";
 import location from "../utils/location.svg";
-// import linkedin from "../utils/linkedin.svg";
+import linkedin from "../utils/linkedin.svg";
 import useRestaurantMenu  from "../utils/useRestaurantMenu.js";
 import RestaurantCategory from "./RestaurantCategory.js";
 import { useState } from "react";
@@ -42,7 +42,6 @@ const RestaurantMenu = () => {
                 </div>
                 <h4 className="text-sm font-medium px-1 ">{ "• " + costForTwoMessage}</h4>
                 </div>
-                {/* <div className="flex"><img className="w-4 h-4" src={STAR}/><h2 className="py-1">{avgRating}{" • "}{costForTwoMessage}</h2></div> */}
                 <div className= "text-sm font-bold text-teal-800">{cuisines.join(', ')}</div>
                 <div className="text-xs ">{areaName},{city}</div>
                 <hr className="w-full my-4 "></hr>
@@ -53,6 +52,8 @@ const RestaurantMenu = () => {
                 <div className="text-xs font-bold text-gray-400">{expectationNotifiers[0].enrichedText.replace(/<\/?b>/g, "")}</div>
                 </div>
                 </div>
+
+                
                 {/* cateogy accordion */}
                 <p>
                     {categories.map((category,index) =>(
@@ -74,9 +75,11 @@ const RestaurantMenu = () => {
                             <div className = "text-[0.6rem] ml-1 text-gray-500"> {address.card.card.completeAddress}</div>
                             </div>
                             <hr className = " my-4 shadow-lg border-gray-400"></hr>
-                            <div className= "flex">
-                                {/* <img src = {linkedin} alt= "linkedIn" /> */}
+                            <div className= "m-2">
                                 <p className = "font-cursive text-[0.6rem] text-gray-500">Foodie.co is a web application created for learning purposes. If you have any questions, feel free to reach out to me on LinkedIn.</p>
+                                <a href= {LINKEDIN} target="blank" rel="noopener noreferrer">
+                                <img src = {linkedin} alt= "linkedIn"  className ="my-4 mx-auto  w-4"/>
+                                </a>
                              </div>
                         </div>
                    

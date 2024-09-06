@@ -1,0 +1,1 @@
+-configure parcel config file to disable default babel transpilation to avoid conflict for Jest's babel

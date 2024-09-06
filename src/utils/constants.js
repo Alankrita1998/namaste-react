@@ -5,3 +5,7 @@ export const LOGIN = "https://tse4.mm.bing.net/th?id=OIP.jAioCeiE6Cwhq9Ph3dee4gH
 export const STAR = "https://tse2.mm.bing.net/th?id=OIP.Vq4iQC8p3quhWYipAjoIIAAAAA&pid=Api&P=0&w=300&h=300";
 export const MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=";
 export const LINKEDIN = "https://www.linkedin.com/in/alankrita-mohapatra/";
+export const FOOD = "https://www.annmariegianni.com/wp-content/uploads/2014/05/brain-foods-1.jpg";
+export const CONTACT = "https://img.freepik.com/premium-vector/young-man-using-laptop-computer-desk-working-online-illustration_24877-69116.jpg?w=2000";
+export const RESTAURANT_LIST ="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+export const EMPTY = "https://tse2.mm.bing.net/th?id=OIP.VEtjKjhwDm_M6AXOQmbZbwHaEX&pid=Api&P=0&h=220"; 

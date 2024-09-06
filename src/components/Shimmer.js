@@ -1,19 +1,24 @@
 const Shimmer = () => {
 
     return(
-        <div className="shimmer-container">
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
+        <div className="flex flex-wrap mx-12  shadow-lg justify-evenly">
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+            <div className = "w-[16vw] h-[42vh]  bg-gray-100 m-4 rounded-lg p-1 " ></div>
+
         </div>
     )
 
