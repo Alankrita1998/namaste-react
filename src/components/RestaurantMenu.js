@@ -71,7 +71,7 @@ const RestaurantMenu = () => {
                              <div className = "  text-xs font-bold leading-normal text-gray-500"> {address.card.card.name}</div>
                             <div className = "text-[0.6rem] text-gray-500 leading-loose"> Outlet: {address.card.card.area}</div>
                             <div className = "flex justify-items-start">
-                            <img src={location} alt = "location" className ="w-[0.75rem] h-auto flex-shrink-0"/>
+                            <img src={location} alt = "location" className ="w-3 h-4 flex-shrink-0"/>
                             <div className = "text-[0.6rem] ml-1 text-gray-500"> {address.card.card.completeAddress}</div>
                             </div>
                             <hr className = " my-4 shadow-lg border-gray-400"></hr>
