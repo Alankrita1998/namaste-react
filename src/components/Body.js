@@ -24,8 +24,8 @@ const Body = () => {
             RESTAURANT_LIST
         );
         const json = await data.json();
-        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilterRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants) || [];
+        setFilterRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
     };
 
     const handleSearch = () => {
@@ -68,7 +68,7 @@ const Body = () => {
 
     if (onlineStatus === false) return <h1>Seems like your internet is down. Please TURN ON the internet to resume.</h1>;
 
-    return listOfRestaurants.length === 0 ? (
+    return (listOfRestaurants && Array.isArray(listOfRestaurants) && listOfRestaurants.length === 0) ? (
         <Shimmer />
     ) : (
         <div className="body">
