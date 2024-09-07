@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import cancel from "../utils/cancel.svg";
 import search from "../utils/search.svg";
 import EmptySearch from "./EmptySearch";
-import { RESTAURANT_LIST} from "../utils/constants.js";
+import { RESTAURANT_LIST, PROXY_URL} from "../utils/constants.js";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -20,6 +20,7 @@ const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch(
+            PROXY_URL +
             RESTAURANT_LIST
         );
         const json = await data.json();
