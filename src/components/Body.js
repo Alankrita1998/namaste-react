@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import cancel from "../utils/cancel.svg";
 import search from "../utils/search.svg";
 import EmptySearch from "./EmptySearch";
-import { RESTAURANT_LIST, PROXY_URL } from "../utils/constants.js";
+import { RESTAURANT_LIST } from "../utils/constants.js";
 
 const Body = () => {
-    
+
     let [filterRestaurant, setFilterRestaurant] = useState([]);
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -21,7 +21,7 @@ const Body = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(PROXY_URL +  encodeURIComponent(RESTAURANT_LIST));
+            const response = await fetch(RESTAURANT_LIST);
             const json = await response.json();
              
             

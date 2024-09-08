@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import { MENU_URL,PROXY_URL } from "./constants";
+import { MENU_URL } from "./constants";
 
 const useRestaurantMenu = (resId) => {
     const [resInfo, setResInfo] = useState(null);
@@ -10,7 +10,7 @@ const useRestaurantMenu = (resId) => {
 
     const fetchMenu = async () => {
         try {
-            const response = await fetch(PROXY_URL + encodeURIComponent(MENU_URL + resId));
+            const response = await fetch(`${MENU_URL}&restaurantId=${resId}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
