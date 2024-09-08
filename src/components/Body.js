@@ -9,8 +9,9 @@ import EmptySearch from "./EmptySearch";
 import { RESTAURANT_LIST, PROXY_URL } from "../utils/constants.js";
 
 const Body = () => {
+    
+    let [filterRestaurant, setFilterRestaurant] = useState([]);
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
-    const [filterRestaurant, setFilterRestaurant] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [isSearching, setIsSearching] = useState(false);
 
