@@ -55,7 +55,7 @@ const Cart = () => {
               </ul>
               </div>
             </div>
-            <hr class="h-px bg-gray-300 border-0 my-2"></hr>
+            <hr className ="h-px bg-gray-300 border-0 my-2"></hr>
             <div className = " m-2 flex justify-between">
               <div className="m-1">
                 <ul>

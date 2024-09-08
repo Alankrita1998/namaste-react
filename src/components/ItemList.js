@@ -1,4 +1,4 @@
-import { CDN_URL, STAR, PROXY_URL } from "../utils/constants";
+import { CDN_URL, STAR, IMAGE_PROXY } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../utils/cartSlice";
 
@@ -27,7 +27,7 @@ const ItemList = ({ items }) => {
             <div className="flex justify-between">
               <div className="flex">
                 <img
-                  src={PROXY_URL+ CDN_URL + item.card.info.imageId}
+                  src={IMAGE_PROXY +  encodeURIComponent(CDN_URL + item?.card?.info?.imageId)}
                   className="w-20 h-20 object-cover mt-7 mx-2"
                 />
                 <div className="flex flex-col my-6">
