@@ -10,11 +10,16 @@ const useRestaurantMenu = (resId) => {
 
     const fetchMenu = async () => {
         try {
-            const response = await fetch(`${MENU_URL}&restaurantId=${resId}`);
+            const response = await fetch(`${MENU_URL}?resId=${resId}`); 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const text = await response.text(); 
+                throw new Error(`Expected JSON but got something else: ${text}`);
+            }
+    
             const json = await response.json();
             if (json.data) {
                 setResInfo(json.data); 

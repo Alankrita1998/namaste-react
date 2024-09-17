@@ -22,14 +22,20 @@ const Body = () => {
     const fetchData = async () => {
         try {
             const response = await fetch(RESTAURANT_LIST);
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const text = await response.text();
+                throw new Error(`Expected JSON but got something else: ${text}`);
+            }
             const json = await response.json();
-             
-            
             if (json?.statusCode === 1) {
                 console.error('API Error:', json.statusMessage);
                 return;
             }
-            
             const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
             setListOfRestaurants(restaurants);
             setFilterRestaurant(restaurants);
@@ -37,7 +43,7 @@ const Body = () => {
             console.error('Error fetching restaurant list:', error);
         }
     };
-
+    
     const handleSearch = () => {
         if (searchText.trim() === "") {
             setFilterRestaurant(listOfRestaurants);
